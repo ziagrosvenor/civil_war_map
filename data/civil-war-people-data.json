@@ -1,62 +1,111 @@
 [
     {
-        "sideOne": "Parliamentarians",
-        "sideTwo": "Royalists",
-        "leaderOne": "William Waller",
-        "leaderTwo": "Ralph, Lord Hopton"
+        "battleName": "Battle of Lansdowne",
+        "belligerent": "Parliamentarians",
+        "leader": "William Waller"
     },
     {
-        "sideOne": "Royalists",
-        "sideTwo": "Parliamentarians",
-        "leaderOne": "Earl of Newcastle",
-        "leaderTwo": "Sir Thomas Fairfax"
+        "battleName": "Battle of Lansdowne",
+        "belligerent": "Royalists",
+        "leader": "Ralph, Lord Hopton",
+        "secondLeader": "+"
     },
     {
-        "sideOne": "Royalists",
-        "sideTwo": "Parliamentarians",
-        "leaderOne": "Charles I of England",
-        "leaderTwo": "Earl of Essex"
+        "battleName": "Battle of Adwalton Moor",
+        "belligerent": "Royalists",
+        "leader": "Earl of Newcastle"
     },
     {
-        "sideOne": "Parliamentarian",
-        "sideTwo": "Royalists",
-        "leaderOne": "Sir Thomas Fairfax",
-        "leaderTwo": "King Charles I"
+        "battleName": "Battle of Adwalton Moor",
+        "belligerent": "Parliamentarians",
+        "leader": "Sir Thomas Fairfax",
+        "secondLeader": null
     },
     {
-        "sideOne": "Parliamentarians",
-        "sideTwo": "Royalists",
-        "leaderOne": "Sir Thomas Fairfax",
-        "leaderTwo": "George, Lord Goring"
+        "battleName": "Battle of Edgehill",
+        "belligerent": "Royalists",
+        "leader": "Charles I of England",
+        "secondLeader": "Earl of Essex"
     },
     {
-        "sideOne": "Royalists",
-        "sideTwo": "Royalists",
-        "leaderOne": "Earl of Leven",
-        "leaderTwo": "Prince Rupert of the Rhine"
+        "battleName": "Battle of Edgehill",
+        "belligerent": "Parliamentarians",
+        "leader": null
     },
     {
-        "sideOne": "Royalists",
-        "sideTwo": "Parliamentarians",
-        "leaderOne": "Sir Ralph Hopton",
-        "leaderTwo": "Sir Thomas Fairfax"
+        "battleName": "Battle of Marston Moor",
+        "belligerent": "Royalists",
+        "leader": "Earl of Leven"
     },
     {
-        "sideOne": "Parliamentarians",
-        "sideTwo": "Royalists",
-        "leaderOne": "Earl of Essex",
-        "leaderTwo": "King Charles I"
+        "battleName": "Battle of Marston Moor",
+        "belligerent": null,
+        "leader": "Prince Rupert of the Rhine",
+        "secondLeader": "Marquess of Newcastle"
     },
     {
-        "sideOne": "Royalists",
-        "sideTwo": "Parliamentarians",
-        "leaderOne": "Spencer Compton, 2nd Earl of Northampton",
-        "leaderTwo": "Sir John Gell, 1st Baronet"
+        "battleName": "Battle of Langport",
+        "belligerent": "Parliamentarians",
+        "leader": "Sir Thomas Fairfax"
     },
     {
-        "sideOne": "Parliamentarians",
-        "sideTwo": "Royalists",
-        "leaderOne": "Earl of Essex",
-        "leaderTwo": "King Charles I"
+        "battleName": "Battle of Langport",
+        "belligerent": "Royalists",
+        "leader": "George, Lord Goring"
+    },
+    {
+        "battleName": "Second Battle of Newbury",
+        "belligerent": "Parliamentarians",
+        "leader": "Earl of Essex",
+        "secondLeader": "Earl of Manchester"
+    },
+    {
+        "battleName": "Second Battle of Newbury",
+        "belligerent": "Royalists",
+        "leader": "King Charles I",
+        "secondLeader": "Prince Maurice"
+    },
+    {
+        "battleName": "Battle of Torrington",
+        "belligerent": "Royalists",
+        "leader": "Sir Ralph Hopton"
+    },
+    {
+        "battleName": "Battle of Torrington",
+        "belligerent": "Parliamentarians",
+        "leader": "Sir Thomas Fairfax"
+    },
+    {
+        "battleName": "Battle of Hopton Heath",
+        "belligerent": "Royalists",
+        "leader": "Spencer Compton, 2nd Earl of Northampton"
+    },
+    {
+        "battleName": "Battle of Hopton Heath",
+        "belligerent": "Parliamentarians",
+        "leader": "Sir John Gell, 1st Baronet",
+        "secondLeader": "Sir William Brereton, 1st Baronet"
+    },
+    {
+        "battleName": "Battle of Naseby",
+        "belligerent": "Parliamentarian",
+        "leader": "Sir Thomas Fairfax",
+        "secondLeader": "King Charles I"
+    },
+    {
+        "battleName": "Battle of Naseby",
+        "belligerent": "Royalists",
+        "leader": null
+    },
+    {
+        "battleName": "Battle of Turnham Green",
+        "belligerent": "Parliamentarians",
+        "leader": "Earl of Essex",
+        "secondLeader": "Philip Skippon"
+    },
+    {
+        "battleName": "Battle of Turnham Green",
+        "belligerent": "Royalists",
+        "leader": "King Charles I"
     }
 ]
