@@ -35,7 +35,8 @@ for(var i = 0; i < battles.length; i++) {
 
     // Remove unwanted text from strings
     var lat = parseFloat(latLng[0]);
-    var lng = parseFloat(latLng[1]);
+    // Values on the wikipedia pages are incorrect as the longditudes should be negative values
+    var lng = parseFloat('-' + latLng[1]);
 
     // Assign the page elements to a variables
     var name = $("#firstHeading span").html();
