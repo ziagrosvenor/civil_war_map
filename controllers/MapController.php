@@ -7,8 +7,8 @@ require 'BaseController.php';
 
 class Map extends Base
 {
-  // $battles property for injecting battles model
-  public $battles;
+  // $battles property to hold battles model passed via instantiation
+  private $battles;
 
   /**
    * Controller takes battles model as object and assigns it to controller property battles
@@ -20,11 +20,11 @@ class Map extends Base
   }
 
   /**
-   * Controller method for map homepage, query $db, fetch array, create view
+   * Controller method for map homepage, query $db, fetch array, create view.
    */
   public function mapHomePage()
   {
-    // calls blog objects getPosts method
+    // Gets battles from battles model.
     $battles = $this->battles->getBattles();
     $this->renderHeader();
     include 'view/templates/map.php';
@@ -39,6 +39,7 @@ class Map extends Base
 
   /**
    * Controller for 404 view
+   * This view show when no page/view can be found
    */
   public function pageNotFound()
   {
