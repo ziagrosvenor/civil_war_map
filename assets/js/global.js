@@ -74,6 +74,7 @@ $(document).ready(function(){
     function addInfoWindow (num, battle, marker, map) {
       var battleName = battle.name;
       var battleDate = battle.date;
+      var battleOutcome = battle.outcome;
       var battleContent = "<h2>" + battleName + "</h2>";
       battleContent += '<p>' + battleDate + '<p>';
 
@@ -87,6 +88,15 @@ $(document).ready(function(){
 
       google.maps.event.addListener(marker, 'mouseout', function() {
         infoWindow.close();
+      });
+
+      google.maps.event.addListener(marker, 'click', function() {
+        infoWindow.close();
+        toggleBounce(marker);
+        $('.modal-title').html(battleName);
+        $('.battle-date').html(battleDate);
+        $('.battle-outcome').html(battleOutcome);
+        $('#battle-modal').modal('toggle');
       });
     };
 
@@ -123,9 +133,6 @@ $(document).ready(function(){
       marker.setTitle((i + 1).toString());
 
       addInfoWindow(i, battle, marker, map);
-      google.maps.event.addListener(marker, 'click', function (){
-        toggleBounce(marker);
-      });
     });
   }
 });
