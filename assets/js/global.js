@@ -65,21 +65,28 @@ $(document).ready(function(){
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
     // Appends a container div to the map in which to display battle information using jQuery.
-    var battleInfoContainer = '<div id="battle-info"></div>';
-    $('#map-canvas').append(battleInfoContainer);
+    // var battleInfoContainer = '<div id="battle-info"></div>';
+    // $('#map-canvas').append(battleInfoContainer);
 
-    // Function used to add an event listener to each marker.
+    // Function used to add an event listeners to each marker.
     // Uses closure to protect values during iterations over battle data.
     // Markers will be made by iterating over the dataset. Making a marker for each iteration.
-    // On click the markers battle information will be displayed in the battle-info container.
-    function addInfoWindow (num, battle, marker) {
+    function addInfoWindow (num, battle, marker, map) {
       var battleName = battle.name;
       var battleDate = battle.date;
       var battleContent = "<h2>" + battleName + "</h2>";
       battleContent += '<p>' + battleDate + '<p>';
 
-      google.maps.event.addListener(marker, 'click', function() {
-        $('#battle-info').html(battleContent);
+      var infoWindow = new google.maps.InfoWindow({
+        content: battleContent
+      });
+
+      google.maps.event.addListener(marker, 'mouseover', function() {
+        infoWindow.open(map, marker);
+      });
+
+      google.maps.event.addListener(marker, 'mouseout', function() {
+        infoWindow.close();
       });
     };
 
@@ -115,7 +122,7 @@ $(document).ready(function(){
 
       marker.setTitle((i + 1).toString());
 
-      addInfoWindow(i, battle, marker);
+      addInfoWindow(i, battle, marker, map);
       google.maps.event.addListener(marker, 'click', function (){
         toggleBounce(marker);
       });
