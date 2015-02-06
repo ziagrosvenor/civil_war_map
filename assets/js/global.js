@@ -110,7 +110,7 @@ $(document).ready(function(){
         map: map,
         position: battleLocation,
         animation: google.maps.Animation.DROP,
-        icon: './views/img/cannon.png'
+        icon: './assets/img/cannon.png'
       });
 
       marker.setTitle((i + 1).toString());
