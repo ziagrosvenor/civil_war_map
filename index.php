@@ -20,6 +20,7 @@ else {
   $page = 'map';
 }
 
+// If JSON is requested send data as JSON.
 if(isset($_GET['json'])) {
   $resource = $_GET['json'];
 
@@ -30,11 +31,15 @@ if(isset($_GET['json'])) {
   }
 }
 
-switch($page) {
-  case 'map':
-    $mapController->mapHomePage();
-  break;
-  default:
-    $mapController->pageNotFound();
-  die();
+// If no JSON resource is requested.
+// serve HTML for application pages or 404 page.
+if(empty($_GET['json'])) {
+  switch($page) {
+    case 'map':
+      $mapController->mapHomePage();
+    break;
+    default:
+      $mapController->pageNotFound();
+    die();
+  }
 }
