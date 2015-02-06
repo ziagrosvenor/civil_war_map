@@ -9,13 +9,13 @@ class Base
    */
   public function renderHeader()
   {
-    include 'view/templates/head.php';
+    include 'views/templates/head.php';
   }
   /**
    * Render header method
    */
   public function renderFooter()
   {
-    include 'view/templates/footer.php';
+    include 'views/templates/footer.php';
   }
 }
