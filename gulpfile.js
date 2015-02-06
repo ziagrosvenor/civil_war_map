@@ -45,7 +45,7 @@ gulp.task('prefix', ['sass'], function () {
 			cascade: true,
 			remove: false
 		}))
-		.pipe(gulp.dest('./assets/css/*.css'));
+		.pipe(gulp.dest('./assets/css/'));
 });
 
 // starts the watch task
