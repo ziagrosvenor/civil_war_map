@@ -5,7 +5,7 @@ namespace Controller;
 //BlogController requires BaseController to render views
 require_once 'BaseController.php';
 
-class Map extends Base
+class Battles extends Base
 {
   // $battles property to hold battles model passed via instantiation
   private $battles;
@@ -19,16 +19,9 @@ class Map extends Base
     $this->battles = $battles;
   }
 
-  /**
-   * Controller method for map homepage, query $db, fetch array, create view.
-  */
-  public function mapHomePage()
+  public function battlesDataAsJSON()
   {
-    // Gets battles from battles model.
     $battles = $this->battles->getBattles();
-    $this->renderHeader();
-    include 'views/templates/map.php';
-    include 'views/templates/modal.php';
-    $this->renderFooter();
+    echo(json_encode($battles));
   }
 }
