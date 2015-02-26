@@ -5,7 +5,7 @@ namespace Controller;
 //BlogController requires BaseController to render views
 require_once 'BaseController.php';
 
-class Map extends Base
+class Page extends Base
 {
   // $battles property to hold battles model passed via instantiation
   private $battles;
@@ -29,6 +29,19 @@ class Map extends Base
     $this->renderHeader();
     include 'views/templates/map.php';
     include 'views/templates/modal.php';
+    $this->renderFooter();
+  }
+
+  /**
+   * Controller method for map homepage, query $db, fetch array, create view.
+  */
+  public function battlePage($id)
+  {
+    // Gets battles from battles model.
+    $factions = $this->battles->getFactionsByBattleId($id);
+    $battle = $this->battles->getBattleById($id);
+    $this->renderHeader();
+    include 'views/templates/battle-details.php';
     $this->renderFooter();
   }
 }
