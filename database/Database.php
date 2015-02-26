@@ -8,7 +8,7 @@ class Database
   private $server   = 'localhost';
   private $username = 'root';
   private $password = 'root';
-  private $database = 'civil_war';
+  private $database = 'dsa_assignment';
   public $pdo;
   public static $instance;
 
