@@ -8,3 +8,28 @@
   </head>
   <body>
   <div class='wrapper'>
+    <nav class='navbar navbar-default'>
+      <ul class='nav navbar-nav'>
+        <?php foreach($battles as $battle): ?>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 
+              <?php echo $battle['name']; ?>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li>
+                <a <?php echo 'href="?page=battle&id=' . $battle['id'] . '" alt="' . $battle['name'] . '"';?>>
+                  <?php echo $battle['name']; ?> webpage
+                </a>
+              </li>
+              <li>
+                <a <?php echo 'href="?rss=battle&id=' . $battle['id'] . '" alt="' . $battle['name'] . '"';?>>
+                  <?php echo $battle['name']; ?> RSS feed
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+        <?php endforeach; ?>
+      </ul> 
+    </nav>

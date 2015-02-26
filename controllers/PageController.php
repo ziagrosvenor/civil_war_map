@@ -26,7 +26,7 @@ class Page extends Base
   {
     // Gets battles from battles model.
     $battles = $this->battles->getBattles();
-    $this->renderHeader();
+    $this->renderHeader($battles);
     include 'views/templates/map.php';
     include 'views/templates/modal.php';
     $this->renderFooter();
@@ -40,7 +40,8 @@ class Page extends Base
     // Gets battles from battles model.
     $factions = $this->battles->getFactionsByBattleId($id);
     $battle = $this->battles->getBattleById($id);
-    $this->renderHeader();
+    $battles = $this->battles->getBattles();
+    $this->renderHeader($battles);
     include 'views/templates/battle-details.php';
     $this->renderFooter();
   }
