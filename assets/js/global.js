@@ -145,7 +145,3 @@ $(document).ready(function(){
     });
   }
 });
-
-$('.battleTest').click(function() {
-  $('#battle-modal').modal('toggle');
-});
