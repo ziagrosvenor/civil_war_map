@@ -55,6 +55,23 @@ class Battles
 
   }
 
+  public function getBattleByName($name)
+  {
+    $stmt = $this->db->query("SELECT * from Battles WHERE Battles.name = :name");
+
+    $stmt->bindParam(':name', $name);
+    $stmt->execute();
+
+    $battle = array();
+
+    while($row = $stmt->fetch()) {
+      $battle = $row;
+    }
+
+    return $battle;
+
+  }
+
   public function getFactionsByBattleId($battleId)
   {
     $stmt = $this->db->query("SELECT Factions.factionName, NotablePersons.notablePersonName FROM Battles

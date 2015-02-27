@@ -25,6 +25,12 @@ class Resource extends Base
     echo(json_encode($battles));
   }
 
+  public function getBattleByNameAsJSON($name)
+  {
+    $battle = $this->battles->getBattleByName($name);
+    echo(json_encode($battle));
+  }
+
   public function renderRSSByBattleId($battleId)
   {
     $battle = $this->battles->getBattleById($battleId);
